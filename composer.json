@@ -1,0 +1,21 @@
+{
+  "name": "nepttune/extra-menu",
+  "description": "Bonus menu component",
+  "homepage": "https://www.peldax.com",
+  "type": "library",
+  "license": ["MIT"],
+  "authors": [
+    {
+      "name": "Václav Pelíšek",
+      "homepage": "https://www.peldax.com"
+    }
+  ],
+  "require": {
+    "nepttune/base-component": "^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Nepttune\\Component\\": "src/"
+    }
+  }
+}
