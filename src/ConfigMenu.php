@@ -21,6 +21,8 @@ final class ConfigMenu extends BaseComponent
 
     public function __construct(array $menu)
     {
+        parent::__construct();
+        
         $this->menu = $menu;
     }
 
