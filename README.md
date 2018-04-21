@@ -2,6 +2,13 @@
 
 :heavy_plus_sign: Bonus menu component
 
+![Packagist](https://img.shields.io/packagist/dt/nepttune/extra-menu.svg)
+![Packagist](https://img.shields.io/packagist/v/nepttune/extra-menu.svg)
+[![CommitsSinceTag](https://img.shields.io/github/commits-since/nepttune/extra-menu/v4.0.1.svg?maxAge=600)]()
+
+[![Code Climate](https://codeclimate.com/github/nepttune/extra-menu/badges/gpa.svg)](https://codeclimate.com/github/nepttune/extra-menu)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nepttune/extra-menu/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nepttune/extra-menu/?branch=master)
+
 ## Introduction
 
 This package contains component designed for generating static menu in admininstration layout.
