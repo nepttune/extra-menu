@@ -53,7 +53,6 @@ parameters:
                 name: 'Order'
                 icon: 'comments'
                 dest: 'Order:default'
-                role: 'administrator'
         Menu2:
             settings:
                 name: 'Settings'
