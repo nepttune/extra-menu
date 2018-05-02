@@ -19,15 +19,24 @@ final class ConfigMenu extends BaseComponent
     /** @var array */
     protected $menu;
 
-    public function __construct(array $menu)
+    /** @var \Nepttune\Model\Authorizator */
+    protected $authorizator;
+
+    public function __construct(array $menu, \Nepttune\Model\Authorizator $authorizator)
     {
         parent::__construct();
         
         $this->menu = $menu;
+        $this->authorizator = $authorizator;
     }
 
     protected function beforeRender() : void
     {
         $this->template->menu = $this->menu;
+    }
+
+    public function hasAccess(string $resource) : bool
+    {
+        return $this->authorizator->isAllowed($resource);
     }
 }
