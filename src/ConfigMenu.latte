@@ -12,13 +12,13 @@
 {foreach $menu as $section => $entries}
     <li class="header">{$section}</li>
     {foreach $entries as $entry}
-        {continueIf isset($entry['role']) && !$user->isInRole($entry['role'])}
+        {continueIf !is_array($entry['dest']) && !$control->hasAccess($entry['dest'])}
 
         {if is_array($entry['dest'])}
             {var $currentSection = false}
             {capture $tempBlock}
                 {foreach $entry['dest'] as $subentry}
-                    {continueIf isset($subentry['role']) && !$user->isInRole($subentry['role'])}
+                    {continueIf !$control->hasAccess($subentry['dest'])}
 
                     {var $currentLink = $presenter->isLinkCurrent($subentry['dest'])}
 
@@ -34,7 +34,7 @@
                 {/foreach}
             {/capture}
 
-            <li n:class="treeview, $currentSection ? menu-open, $currentSection ? active">
+            <li n:if="!empty($tempBlock)" n:class="treeview, $currentSection ? menu-open, $currentSection ? active">
                 <a href="#">{icon $entry['icon']} <span>{$entry['name']}</span>
                     <span class="pull-right-container">
                     <i class="fa fa-angle-left pull-right"></i>
