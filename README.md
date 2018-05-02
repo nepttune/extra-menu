@@ -32,12 +32,10 @@ Parameter array has to follow format of following example. There is some clarify
   - `dest` - Link destination. Can be array, to create expandable sub-menu.
   - `icon` - Displayed FA icon.
   - `name` - Displayed name.
-  - `role` - Role required for user to have in order to display this link. (OPTIONAL)
   - `class` - HTML class added to the link element. When `dest` is an array, class is added to every link. (OPTIONAL)
 - `category` and `ingredient` are representation of submenu options with following options.
   - `dest` - Link destination.
   - `name` - Displayed name.
-  - `role` - Role required for user to have in order to display this link. (OPTIONAL)
   - `class` - HTML class added to the link element. (OPTIONAL)
 
 ### Example configuration
