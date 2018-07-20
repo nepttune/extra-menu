@@ -22,12 +22,12 @@ final class ConfigMenu extends BaseComponent
     /** @var \Nepttune\Model\Authorizator */
     protected $authorizator;
 
-    public function __construct(array $menu, \Nepttune\Model\Authorizator $authorizator)
+    public function __construct(array $menu, \Nette\DI\Container $container)
     {
         parent::__construct();
         
         $this->menu = $menu;
-        $this->authorizator = $authorizator;
+        $this->authorizator = $container->getService('authorizator');
     }
 
     protected function beforeRender() : void
