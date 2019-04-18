@@ -14,7 +14,7 @@ declare(strict_types = 1);
 
 namespace Nepttune\Component;
 
-final class ConfigMenu extends BaseComponent
+final class ConfigMenu extends \Nette\Application\UI\Control
 {
     /** @var array */
     protected $menu;
@@ -33,6 +33,13 @@ final class ConfigMenu extends BaseComponent
     protected function beforeRender() : void
     {
         $this->template->menu = $this->menu;
+    }
+    
+    public function render() : void
+    {
+        $this->beforeRender();
+        $this->template->setFile(__DIR__ . '/ConfigMenu.latte');
+        $this->template->render();
     }
 
     public function hasAccess(string $resource) : bool
