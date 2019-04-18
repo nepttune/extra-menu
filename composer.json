@@ -12,7 +12,8 @@
   ],
   "require": {
     "nette/application": "^3.0",
-    "nette/di": "^3.0"
+    "nette/di": "^3.0",
+    "nepttune/macro": "^2.0"
   },
   "autoload": {
     "psr-4": {
