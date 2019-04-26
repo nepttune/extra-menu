@@ -23,9 +23,7 @@ final class ConfigMenu extends \Nette\Application\UI\Control
     protected $authorizator;
 
     public function __construct(array $menu, \Nette\DI\Container $container)
-    {
-        parent::__construct();
-        
+    {   
         $this->menu = $menu;
         $this->authorizator = $container->getService('authorizator');
     }
