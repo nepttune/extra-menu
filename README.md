@@ -29,7 +29,8 @@ Parameter array has to follow format of following example. There is some clarify
 
 - `Menu` and `Menu2` are non clickable items. Can be used as headers or for multiple menu sections.
 - `order` and `settings` are representation of menu items with following options.
-  - `dest` - Link destination. Can be array, to create expandable sub-menu.
+  - `dest` - Link destination. Can be array to create expandable sub-menu.
+  - `noPermissions` - By default, each entry is checked against authorizator if user can view it. This option disables this check. (OPTIONAL)
   - `icon` - Displayed FA icon.
   - `name` - Displayed name.
   - `class` - HTML class added to the link element. When `dest` is an array, class is added to every link. (OPTIONAL)
@@ -60,6 +61,7 @@ parameters:
                 dest:
                     category:
                         name: 'Category'
+                        noPermissions: true
                         dest: 'Category:default'
                     ingredient:
                         name: 'Ingredient'
